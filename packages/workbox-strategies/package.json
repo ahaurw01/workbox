@@ -1,6 +1,6 @@
 {
-  "name": "workbox-strategies",
-  "version": "7.3.0",
+  "name": "@ahaurw01/workbox-strategies",
+  "version": "7.3.1",
   "license": "MIT",
   "author": "Google's Web DevRel Team and Google's Aurora Team",
   "description": "A service worker helper library implementing common caching strategies.",
