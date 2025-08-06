@@ -158,6 +158,13 @@ class StrategyHandler {
         | Response
         | undefined;
       if (possiblePreloadResponse) {
+        if (possiblePreloadResponse.type === 'error') {
+          throw new WorkboxError('no-response', {
+            url: request.url,
+            error: new Error('event.preloadResponse has type "error".'),
+          });
+        }
+
         if (process.env.NODE_ENV !== 'production') {
           logger.log(
             `Using a preloaded navigation response for ` +
